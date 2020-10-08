@@ -1,0 +1,33 @@
+.header {
+	background: #d6d3c8;
+    padding: 20px;
+    display: flex;
+
+    @include device(phone){
+        flex-direction: column;
+    }
+    
+    &-logo{
+        flex-grow: 1;
+    }
+
+    &-menu{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                &:first-child a {
+                    padding-left: 0px;
+                }
+                a {
+                    color: #252525;
+                    font-size: 1.125em;
+                    padding: 0 10px;
+                }
+            }
+            @include device(phone){
+                margin-top: 8px;
+            }
+        }
+    }
+}
